@@ -1,11 +1,13 @@
 from enum import Enum
 
+
 class Triangle(Enum):
     Scalene = 'Scalene'
     Isosceles = 'Isosceles'
     Equilateral = 'Equilateral'
 
-def triangle(a: int, b: int, c:int) -> Triangle:
+
+def triangle(a: int, b: int, c: int) -> Triangle:
     sorted_value = sorted([a, b, c])
     if sorted_value[0] + sorted_value[1] <= sorted_value[2]:
         raise ValueError("Not a proper triangle")

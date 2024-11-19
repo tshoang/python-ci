@@ -4,13 +4,14 @@ from triangle import triangle, Triangle
 
 
 def test_valid_triangle() -> None:
-    assert triangle(2,3,4) == Triangle.Scalene
+    assert triangle(2, 3, 4) == Triangle.Scalene
 
-    assert triangle(3,3,4) == Triangle.Isosceles
-    assert triangle(4,3,3) == Triangle.Isosceles
-    assert triangle(3,4,3) == Triangle.Isosceles
+    assert triangle(3, 3, 4) == Triangle.Isosceles
+    assert triangle(4, 3, 3) == Triangle.Isosceles
+    assert triangle(3, 4, 3) == Triangle.Isosceles
 
-    assert triangle(2,2,2) == Triangle.Equilateral
+    assert triangle(2, 2, 2) == Triangle.Equilateral
+
 
 def test_invalid_triangle() -> None:
     with pytest.raises(ValueError):
