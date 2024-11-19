@@ -35,5 +35,5 @@ jobs:
       run: |
         pycodestyle --show-source *.py
     - name: Type checking
-      run |
+      run: |
         mypy --strict *.py
