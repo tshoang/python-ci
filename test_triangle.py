@@ -3,7 +3,7 @@ import pytest
 from triangle import triangle, Triangle
 
 
-def test_valid_triangle():
+def test_valid_triangle() -> None:
     assert triangle(2,3,4) == Triangle.Scalene
 
     assert triangle(3,3,4) == Triangle.Isosceles
@@ -12,7 +12,7 @@ def test_valid_triangle():
 
     assert triangle(2,2,2) == Triangle.Equilateral
 
-def test_invalid_triangle():
+def test_invalid_triangle() -> None:
     with pytest.raises(ValueError):
         triangle(0, 3, 3)
     with pytest.raises(ValueError):
