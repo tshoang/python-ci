@@ -26,14 +26,17 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest pycodestyle mypy
+        pip install mypy pytest pycodestyle pydocstring
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Type checking
+      run: |
+        mypy --strict *.py
     - name: Test with pytest
       run: |
         pytest
     - name: Check PEP8 style
       run: |
         pycodestyle --show-source *.py
-    - name: Type checking
+    - name: Check docstrings style
       run: |
-        mypy --strict *.py
+        pydocstring triangle.py
