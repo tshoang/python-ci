@@ -39,4 +39,3 @@ def test_invalid_triangle() -> None:
         triangle(2, 5, 2)
     with pytest.raises(ValueError):
         triangle(2, 2, 5)
-
